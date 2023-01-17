@@ -1,0 +1,957 @@
+[gd_scene load_steps=97 format=2]
+
+[ext_resource path="res://Scripts/Titlescreen/Titlescreen.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Titlescreen/StartButton.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Titlescreen/OptionButton.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Titlescreen/MultiplayerButton.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Titlescreen/OptionResolutionButton.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Titlescreen/CloseButton.gd" type="Script" id=7]
+[ext_resource path="res://Resource/20_FontRessource.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Image/Titlescreen/CheckboxChecked.png" type="Texture" id=9]
+[ext_resource path="res://Image/2DEffect.png" type="Texture" id=10]
+[ext_resource path="res://Image/Titlescreen/Checkbox.png" type="Texture" id=11]
+[ext_resource path="res://Image/Titlescreen/Keyboard.png" type="Texture" id=12]
+[ext_resource path="res://Image/Titlescreen/KeyboardSelected.png" type="Texture" id=13]
+[ext_resource path="res://Image/Titlescreen/Title.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/Titlescreen/MoveControllerCheckBox.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/Titlescreen/FullscreenCheckBox.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/Titlescreen/MoveKeyboardCheckBox.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/Titlescreen/ShopButton.gd" type="Script" id=18]
+[ext_resource path="res://Scripts/Titlescreen/BorderlessCheckBox.gd" type="Script" id=19]
+[ext_resource path="res://Resource/Font.ttf" type="DynamicFontData" id=20]
+[ext_resource path="res://Image/Titlescreen/MusicMute.png" type="Texture" id=21]
+[ext_resource path="res://Image/Titlescreen/MusicMute2.png" type="Texture" id=22]
+[ext_resource path="res://Scripts/Titlescreen/MusicMuteCheckBox.gd" type="Script" id=23]
+[ext_resource path="res://Image/Titlescreen/Controller.png" type="Texture" id=24]
+[ext_resource path="res://Image/Titlescreen/ControllerSelected.png" type="Texture" id=25]
+[ext_resource path="res://Image/Titlescreen/NextHover.png" type="Texture" id=26]
+[ext_resource path="res://Scripts/Titlescreen/ViewportShopButton.gd" type="Script" id=27]
+[ext_resource path="res://Scripts/Titlescreen/SelectFrameButton.gd" type="Script" id=28]
+[ext_resource path="res://Image/Titlescreen/Back.png" type="Texture" id=29]
+[ext_resource path="res://Scripts/Titlescreen/LastFrameButton.gd" type="Script" id=30]
+[ext_resource path="res://Scripts/Titlescreen/NextFrameButton.gd" type="Script" id=31]
+[ext_resource path="res://Image/Titlescreen/ShowStats.png" type="Texture" id=32]
+[ext_resource path="res://Image/Titlescreen/ShowStatsHover.png" type="Texture" id=33]
+[ext_resource path="res://Scripts/Titlescreen/ShowCloseStatsButton.gd" type="Script" id=34]
+[ext_resource path="res://Image/Titlescreen/BackHover.png" type="Texture" id=35]
+[ext_resource path="res://Image/Titlescreen/Next.png" type="Texture" id=36]
+
+[sub_resource type="PlaneMesh" id=78]
+size = Vector2( 50, 25 )
+
+[sub_resource type="SpatialMaterial" id=79]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=80]
+
+[sub_resource type="StyleBoxEmpty" id=81]
+
+[sub_resource type="StyleBoxEmpty" id=82]
+
+[sub_resource type="StyleBoxEmpty" id=83]
+
+[sub_resource type="StyleBoxEmpty" id=84]
+
+[sub_resource type="StyleBoxEmpty" id=85]
+
+[sub_resource type="StyleBoxEmpty" id=86]
+
+[sub_resource type="StyleBoxFlat" id=128]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxEmpty" id=87]
+
+[sub_resource type="StyleBoxEmpty" id=88]
+
+[sub_resource type="StyleBoxEmpty" id=89]
+
+[sub_resource type="StyleBoxEmpty" id=90]
+
+[sub_resource type="StyleBoxEmpty" id=91]
+
+[sub_resource type="StyleBoxEmpty" id=92]
+
+[sub_resource type="StyleBoxEmpty" id=93]
+
+[sub_resource type="StyleBoxEmpty" id=94]
+
+[sub_resource type="StyleBoxEmpty" id=95]
+
+[sub_resource type="StyleBoxEmpty" id=96]
+
+[sub_resource type="StyleBoxEmpty" id=97]
+
+[sub_resource type="StyleBoxEmpty" id=98]
+
+[sub_resource type="StyleBoxEmpty" id=99]
+
+[sub_resource type="DynamicFont" id=123]
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=125]
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=126]
+font_data = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=124]
+font_data = ExtResource( 20 )
+
+[sub_resource type="StyleBoxFlat" id=131]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=133]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+
+[sub_resource type="StyleBoxFlat" id=132]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="ViewportTexture" id=140]
+viewport_path = NodePath("ShopHud/VBoxContainer/HBoxContainer/HBoxContainer/Viewport")
+
+[sub_resource type="StyleBoxFlat" id=136]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=137]
+bg_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id=139]
+
+[sub_resource type="StyleBoxFlat" id=138]
+bg_color = Color( 0.203922, 0.596078, 0.858824, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=135]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="DynamicFontData" id=65]
+font_path = "res://Resource/Font.ttf"
+
+[sub_resource type="DynamicFont" id=100]
+size = 20
+font_data = SubResource( 65 )
+
+[sub_resource type="DynamicFont" id=101]
+size = 20
+font_data = SubResource( 65 )
+
+[sub_resource type="StyleBoxEmpty" id=106]
+
+[sub_resource type="StyleBoxEmpty" id=129]
+
+[sub_resource type="ImageTexture" id=109]
+
+[sub_resource type="ImageTexture" id=110]
+
+[sub_resource type="StyleBoxTexture" id=111]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="StyleBoxTexture" id=112]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="StyleBoxEmpty" id=113]
+
+[sub_resource type="StyleBoxTexture" id=114]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="ImageTexture" id=75]
+
+[sub_resource type="ImageTexture" id=76]
+
+[sub_resource type="StyleBoxEmpty" id=77]
+
+[sub_resource type="StyleBoxEmpty" id=69]
+
+[sub_resource type="Theme" id=115]
+PopupMenu/constants/hseparation = 25
+PopupMenu/constants/vseparation = 25
+PopupMenu/icons/radio_checked = SubResource( 75 )
+PopupMenu/icons/radio_unchecked = SubResource( 76 )
+PopupMenu/styles/hover = SubResource( 77 )
+PopupMenu/styles/panel = SubResource( 69 )
+
+[sub_resource type="ImageTexture" id=116]
+
+[sub_resource type="StyleBoxFlat" id=117]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=118]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=119]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.596078, 0.858824, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id=127]
+
+[sub_resource type="CanvasItemMaterial" id=120]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=121]
+colors = PoolColorArray( 0.299522, 0.450111, 0.923828, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=141]
+gradient = SubResource( 121 )
+
+[sub_resource type="ParticlesMaterial" id=122]
+flag_disable_z = true
+gravity = Vector3( -100, 0, 0 )
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 141 )
+anim_speed = 1.0
+
+[node name="Titlescreen" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+current = true
+fov = 80.0
+
+[node name="Platform" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -3.15 )
+mesh = SubResource( 78 )
+material/0 = SubResource( 79 )
+
+[node name="Hud" type="ColorRect" parent="."]
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_right = 350.0
+rect_min_size = Vector2( 300, 810 )
+color = Color( 0, 0, 0, 0.490196 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hud"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -184.5
+margin_bottom = 184.5
+
+[node name="TitleRect" type="TextureRect" parent="Hud/VBoxContainer"]
+margin_left = 36.0
+margin_right = 264.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 150 )
+size_flags_horizontal = 4
+texture = ExtResource( 14 )
+
+[node name="Start" type="Button" parent="Hud/VBoxContainer"]
+margin_top = 154.0
+margin_right = 300.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 80 )
+custom_styles/pressed = SubResource( 81 )
+custom_styles/focus = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
+text = "Spiel starten"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Multiplayer" type="Button" parent="Hud/VBoxContainer"]
+margin_top = 208.0
+margin_right = 300.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/focus = SubResource( 86 )
+custom_styles/disabled = SubResource( 128 )
+custom_styles/normal = SubResource( 87 )
+text = "Multiplayer"
+script = ExtResource( 5 )
+
+[node name="Shop" type="Button" parent="Hud/VBoxContainer"]
+margin_top = 262.0
+margin_right = 300.0
+margin_bottom = 312.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 88 )
+custom_styles/pressed = SubResource( 89 )
+custom_styles/focus = SubResource( 90 )
+custom_styles/normal = SubResource( 91 )
+text = "Shop"
+script = ExtResource( 18 )
+
+[node name="Options" type="Button" parent="Hud/VBoxContainer"]
+margin_top = 316.0
+margin_right = 300.0
+margin_bottom = 366.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 92 )
+custom_styles/pressed = SubResource( 93 )
+custom_styles/focus = SubResource( 94 )
+custom_styles/normal = SubResource( 95 )
+text = "Optionen"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="Hud/VBoxContainer"]
+margin_top = 370.0
+margin_right = 300.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 96 )
+custom_styles/pressed = SubResource( 97 )
+custom_styles/focus = SubResource( 98 )
+custom_styles/normal = SubResource( 99 )
+text = "Beenden"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighscoreHud" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -275.0
+margin_top = -70.0
+margin_right = 275.0
+color = Color( 0, 0, 0, 0.490196 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HighscoreHud"]
+margin_right = 550.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HighscoreHud/HBoxContainer"]
+margin_right = 120.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+
+[node name="HighscorePointsLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 8 )
+text = "Punkte"
+align = 1
+
+[node name="HighscorePointsEditLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer"]
+margin_top = 31.0
+margin_right = 120.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 123 )
+text = "10000"
+align = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HighscoreHud/HBoxContainer"]
+margin_left = 124.0
+margin_right = 245.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+
+[node name="HighscoreLevelLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer2"]
+margin_right = 121.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 8 )
+text = "Level"
+align = 1
+
+[node name="HighscoreLevelEditLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer2"]
+margin_top = 31.0
+margin_right = 121.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 125 )
+text = "1"
+align = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HighscoreHud/HBoxContainer"]
+margin_left = 249.0
+margin_right = 425.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+
+[node name="HighscoreDeletedRowsLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer3"]
+margin_right = 176.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 8 )
+text = "Gelöschte Reihen"
+align = 1
+
+[node name="HighscoreDeletedRowsEditLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer3"]
+margin_top = 31.0
+margin_right = 176.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 126 )
+text = "20"
+align = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HighscoreHud/HBoxContainer"]
+margin_left = 429.0
+margin_right = 550.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+
+[node name="HighscoreTimeLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer4"]
+margin_right = 121.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 8 )
+text = "Zeit"
+align = 1
+
+[node name="HighscoreTimeEditLabel" type="Label" parent="HighscoreHud/HBoxContainer/VBoxContainer4"]
+margin_top = 31.0
+margin_right = 121.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 124 )
+text = "00:00:00"
+align = 1
+
+[node name="ShowCloseStatsTextureButton" type="TextureButton" parent="HighscoreHud"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = 2.0
+margin_right = 28.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 32 )
+texture_pressed = ExtResource( 33 )
+texture_hover = ExtResource( 33 )
+script = ExtResource( 34 )
+
+[node name="ShopHud" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 400.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 600 )
+color = Color( 0, 0, 0, 0.490196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopHud"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CubeLabel" type="Label" parent="ShopHud/VBoxContainer"]
+margin_right = 1040.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = ExtResource( 8 )
+text = "Würfel des Beginnns"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopHud/VBoxContainer"]
+margin_top = 104.0
+margin_right = 1040.0
+margin_bottom = 508.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopHud/VBoxContainer/HBoxContainer"]
+margin_right = 518.0
+margin_bottom = 404.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Viewport" type="Viewport" parent="ShopHud/VBoxContainer/HBoxContainer/HBoxContainer"]
+size = Vector2( 500, 400 )
+handle_input_locally = false
+render_target_update_mode = 3
+shadow_atlas_size = 4096
+
+[node name="Camera" type="Camera" parent="ShopHud/VBoxContainer/HBoxContainer/HBoxContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4, 0.5 )
+current = true
+
+[node name="Button" type="Button" parent="ShopHud/VBoxContainer/HBoxContainer/HBoxContainer"]
+margin_left = 7.0
+margin_right = 511.0
+margin_bottom = 404.0
+size_flags_horizontal = 0
+size_flags_vertical = 6
+custom_styles/hover = SubResource( 131 )
+custom_styles/pressed = SubResource( 133 )
+custom_styles/normal = SubResource( 132 )
+keep_pressed_outside = true
+icon = SubResource( 140 )
+script = ExtResource( 27 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopHud/VBoxContainer/HBoxContainer"]
+margin_left = 522.0
+margin_right = 1040.0
+margin_bottom = 404.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopHud/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 518.0
+margin_bottom = 369.0
+size_flags_vertical = 3
+
+[node name="PropertiesLabel" type="RichTextLabel" parent="ShopHud/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+margin_right = 518.0
+margin_bottom = 369.0
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "Am Anfang gab es nur undurchdringbares Chaos. Mitten in diesem Chaos entwickelte sich aus dem Nichts ein Ei, aus dem Arceus schlüpfte. Das Chaos hinter sich lassend, hat es das Universum und die Welt geformt."
+text = "Am Anfang gab es nur undurchdringbares Chaos. Mitten in diesem Chaos entwickelte sich aus dem Nichts ein Ei, aus dem Arceus schlüpfte. Das Chaos hinter sich lassend, hat es das Universum und die Welt geformt."
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ShopHud/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 373.0
+margin_right = 518.0
+margin_bottom = 404.0
+
+[node name="SelectFrameButton" type="Button" parent="ShopHud/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
+margin_left = 204.0
+margin_right = 314.0
+margin_bottom = 31.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 136 )
+custom_styles/pressed = SubResource( 137 )
+custom_styles/focus = SubResource( 139 )
+custom_styles/disabled = SubResource( 138 )
+custom_styles/normal = SubResource( 135 )
+text = "Auswählen"
+script = ExtResource( 28 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ShopHud/VBoxContainer"]
+margin_top = 532.0
+margin_right = 1040.0
+margin_bottom = 580.0
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopHud/VBoxContainer/HBoxContainer2"]
+margin_right = 518.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+
+[node name="LastFrameButton" type="TextureButton" parent="ShopHud/VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_right = 48.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 35 )
+texture_hover = ExtResource( 35 )
+script = ExtResource( 30 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ShopHud/VBoxContainer/HBoxContainer2"]
+margin_left = 522.0
+margin_right = 1040.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="NextFrameButton" type="TextureButton" parent="ShopHud/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+margin_left = 470.0
+margin_right = 518.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 36 )
+texture_pressed = ExtResource( 26 )
+texture_hover = ExtResource( 26 )
+script = ExtResource( 31 )
+
+[node name="OptionenHud" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 350.0
+color = Color( 0, 0, 0, 0.490196 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionenHud"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionenHud/VBoxContainer"]
+margin_right = 350.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+alignment = 2
+
+[node name="MoveLabel" type="Label" parent="OptionenHud/VBoxContainer/VBoxContainer"]
+margin_top = 43.0
+margin_right = 350.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 8 )
+text = "Bewegung"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer"]
+margin_top = 74.0
+margin_right = 350.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 0, 50 )
+alignment = 2
+
+[node name="ControllerLabel" type="Label" parent="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_top = 11.0
+margin_right = 173.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 100 )
+text = "Controller"
+align = 1
+
+[node name="KeyboardLabel" type="Label" parent="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 177.0
+margin_top = 11.0
+margin_right = 350.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 101 )
+text = "Tastatur"
+align = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 350.0
+margin_bottom = 200.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 173.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_left = 50.0
+margin_right = 122.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 64, 64 )
+custom_icons/checked = ExtResource( 25 )
+custom_icons/unchecked = ExtResource( 24 )
+custom_styles/focus = SubResource( 106 )
+script = ExtResource( 15 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 177.0
+margin_right = 350.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="CheckBox2" type="CheckBox" parent="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer2"]
+margin_left = 50.0
+margin_right = 122.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 64, 64 )
+custom_icons/checked = ExtResource( 13 )
+custom_icons/unchecked = ExtResource( 12 )
+custom_styles/focus = SubResource( 129 )
+pressed = true
+script = ExtResource( 17 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="OptionenHud/VBoxContainer"]
+margin_top = 204.0
+margin_right = 350.0
+margin_bottom = 344.0
+rect_min_size = Vector2( 0, 140 )
+alignment = 2
+
+[node name="MonitorLabel" type="Label" parent="OptionenHud/VBoxContainer/VBoxContainer2"]
+margin_top = 20.0
+margin_right = 350.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 50 )
+custom_fonts/font = ExtResource( 8 )
+text = "Bildschirm"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer2"]
+margin_top = 74.0
+margin_right = 350.0
+margin_bottom = 140.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_right = 200.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 200, 0 )
+alignment = 1
+
+[node name="FullscreenLabel" type="Label" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 25.0
+margin_right = 174.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 8 )
+text = "Vollbildschirm"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 31.0
+margin_right = 200.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 82.0
+margin_right = 117.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+custom_icons/checked = SubResource( 109 )
+custom_icons/unchecked = SubResource( 110 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 112 )
+custom_styles/focus = SubResource( 113 )
+custom_styles/normal = SubResource( 114 )
+script = ExtResource( 16 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 204.0
+margin_right = 350.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+margin_right = 146.0
+margin_bottom = 27.0
+alignment = 1
+
+[node name="BorderlessLabel" type="Label" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 19.0
+margin_right = 126.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 8 )
+text = "Rahmenlos"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+margin_top = 31.0
+margin_right = 146.0
+margin_bottom = 66.0
+alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+margin_left = 55.0
+margin_right = 90.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+custom_icons/checked = SubResource( 109 )
+custom_icons/unchecked = SubResource( 110 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 112 )
+custom_styles/focus = SubResource( 113 )
+custom_styles/normal = SubResource( 114 )
+script = ExtResource( 19 )
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="OptionenHud/VBoxContainer"]
+margin_top = 348.0
+margin_right = 350.0
+margin_bottom = 428.0
+rect_min_size = Vector2( 0, 80 )
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer3"]
+margin_top = 40.0
+margin_right = 350.0
+margin_bottom = 80.0
+alignment = 2
+
+[node name="ResolutionLabel" type="Label" parent="OptionenHud/VBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_top = 6.0
+margin_right = 173.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 8 )
+text = "Auflösung"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_left = 177.0
+margin_right = 350.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="OptionenHud/VBoxContainer/VBoxContainer3/HBoxContainer/HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 150, 40 )
+theme = SubResource( 115 )
+custom_icons/arrow = SubResource( 116 )
+custom_styles/hover = SubResource( 117 )
+custom_styles/pressed = SubResource( 118 )
+custom_styles/normal = SubResource( 119 )
+align = 1
+script = ExtResource( 6 )
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="OptionenHud/VBoxContainer"]
+margin_top = 432.0
+margin_right = 350.0
+margin_bottom = 810.0
+size_flags_vertical = 3
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer4"]
+margin_top = 320.0
+margin_right = 350.0
+margin_bottom = 378.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer4/HBoxContainer"]
+margin_right = 288.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionenHud/VBoxContainer/VBoxContainer4/HBoxContainer"]
+margin_left = 292.0
+margin_right = 350.0
+margin_bottom = 58.0
+alignment = 2
+
+[node name="MusicMuteCheckBox" type="CheckBox" parent="OptionenHud/VBoxContainer/VBoxContainer4/HBoxContainer/HBoxContainer2"]
+margin_right = 58.0
+margin_bottom = 58.0
+size_flags_vertical = 9
+custom_icons/checked = ExtResource( 21 )
+custom_icons/unchecked = ExtResource( 22 )
+custom_styles/focus = SubResource( 127 )
+script = ExtResource( 23 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+visible = false
+material = SubResource( 120 )
+amount = 25
+lifetime = 4.0
+preprocess = 5.0
+process_material = SubResource( 122 )
+texture = ExtResource( 10 )
+
+[connection signal="mouse_entered" from="Hud/VBoxContainer/Start" to="Hud/VBoxContainer/Start" method="_on_Start_mouse_entered"]
+[connection signal="mouse_exited" from="Hud/VBoxContainer/Start" to="Hud/VBoxContainer/Start" method="_on_Start_mouse_exited"]
+[connection signal="pressed" from="Hud/VBoxContainer/Start" to="Hud/VBoxContainer/Start" method="_on_Start_pressed"]
+[connection signal="mouse_entered" from="Hud/VBoxContainer/Multiplayer" to="Hud/VBoxContainer/Multiplayer" method="_on_Multiplayer_mouse_entered"]
+[connection signal="mouse_exited" from="Hud/VBoxContainer/Multiplayer" to="Hud/VBoxContainer/Multiplayer" method="_on_Multiplayer_mouse_exited"]
+[connection signal="pressed" from="Hud/VBoxContainer/Multiplayer" to="Hud/VBoxContainer/Multiplayer" method="_on_Multiplayer_pressed"]
+[connection signal="mouse_entered" from="Hud/VBoxContainer/Shop" to="Hud/VBoxContainer/Shop" method="_on_Shop_mouse_entered"]
+[connection signal="mouse_exited" from="Hud/VBoxContainer/Shop" to="Hud/VBoxContainer/Shop" method="_on_Shop_mouse_exited"]
+[connection signal="pressed" from="Hud/VBoxContainer/Shop" to="Hud/VBoxContainer/Shop" method="_on_Shop_pressed"]
+[connection signal="mouse_entered" from="Hud/VBoxContainer/Options" to="Hud/VBoxContainer/Options" method="_on_Options_mouse_entered"]
+[connection signal="mouse_exited" from="Hud/VBoxContainer/Options" to="Hud/VBoxContainer/Options" method="_on_Options_mouse_exited"]
+[connection signal="pressed" from="Hud/VBoxContainer/Options" to="Hud/VBoxContainer/Options" method="_on_Options_pressed"]
+[connection signal="mouse_entered" from="Hud/VBoxContainer/Close" to="Hud/VBoxContainer/Close" method="_on_Close_mouse_entered"]
+[connection signal="mouse_exited" from="Hud/VBoxContainer/Close" to="Hud/VBoxContainer/Close" method="_on_Close_mouse_exited"]
+[connection signal="pressed" from="Hud/VBoxContainer/Close" to="Hud/VBoxContainer/Close" method="_on_Close_pressed"]
+[connection signal="pressed" from="HighscoreHud/ShowCloseStatsTextureButton" to="HighscoreHud/ShowCloseStatsTextureButton" method="_on_ShowCloseStatsTextureButton_pressed"]
+[connection signal="button_down" from="ShopHud/VBoxContainer/HBoxContainer/HBoxContainer/Button" to="ShopHud/VBoxContainer/HBoxContainer/HBoxContainer/Button" method="_on_Button_button_down"]
+[connection signal="button_up" from="ShopHud/VBoxContainer/HBoxContainer/HBoxContainer/Button" to="ShopHud/VBoxContainer/HBoxContainer/HBoxContainer/Button" method="_on_Button_button_up"]
+[connection signal="pressed" from="ShopHud/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer2/SelectFrameButton" to="ShopHud/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer2/SelectFrameButton" method="_on_SelectFrameButton_pressed"]
+[connection signal="pressed" from="ShopHud/VBoxContainer/HBoxContainer2/HBoxContainer/LastFrameButton" to="ShopHud/VBoxContainer/HBoxContainer2/HBoxContainer/LastFrameButton" method="_on_LastFrameButton_pressed"]
+[connection signal="pressed" from="ShopHud/VBoxContainer/HBoxContainer2/HBoxContainer2/NextFrameButton" to="ShopHud/VBoxContainer/HBoxContainer2/HBoxContainer2/NextFrameButton" method="_on_NextFrameButton_pressed"]
+[connection signal="pressed" from="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer/CheckBox" to="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer/CheckBox" method="_on_CheckBox_pressed"]
+[connection signal="pressed" from="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/CheckBox2" to="OptionenHud/VBoxContainer/VBoxContainer/HBoxContainer2/HBoxContainer2/CheckBox2" method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer2/CheckBox" to="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer2/CheckBox" method="_on_CheckBox_pressed"]
+[connection signal="pressed" from="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2/HBoxContainer2/CheckBox" to="OptionenHud/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2/HBoxContainer2/CheckBox" method="_on_CheckBox_pressed"]
+[connection signal="item_selected" from="OptionenHud/VBoxContainer/VBoxContainer3/HBoxContainer/HBoxContainer/OptionButton" to="OptionenHud/VBoxContainer/VBoxContainer3/HBoxContainer/HBoxContainer/OptionButton" method="_on_OptionButton_item_selected"]
+[connection signal="pressed" from="OptionenHud/VBoxContainer/VBoxContainer4/HBoxContainer/HBoxContainer2/MusicMuteCheckBox" to="OptionenHud/VBoxContainer/VBoxContainer4/HBoxContainer/HBoxContainer2/MusicMuteCheckBox" method="_on_MusicMuteCheckBox_pressed"]

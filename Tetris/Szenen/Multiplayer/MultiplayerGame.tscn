@@ -1,0 +1,266 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scripts/Game/ContinueButton.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Multiplayer/MultiplayerGame.gd" type="Script" id=2]
+[ext_resource path="res://Image/Game/GameOverPausedTexturImage.png" type="Texture" id=3]
+[ext_resource path="res://Image/Achievement/AchievementTextureImage.png" type="Texture" id=4]
+[ext_resource path="res://Image/2DEffect.png" type="Texture" id=5]
+[ext_resource path="res://Resource/20_FontRessource.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Scripts/Game/Hud.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Game/TitlescreenMenuButton.gd" type="Script" id=8]
+
+[sub_resource type="PlaneMesh" id=7]
+
+[sub_resource type="SpatialMaterial" id=76]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=59]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=60]
+colors = PoolColorArray( 0.299522, 0.450111, 0.923828, 1, 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=65]
+font_path = "res://Resource/Font.ttf"
+
+[sub_resource type="DynamicFont" id=61]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="DynamicFont" id=62]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="DynamicFont" id=63]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="DynamicFont" id=64]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="StyleBoxEmpty" id=66]
+
+[sub_resource type="StyleBoxEmpty" id=67]
+
+[sub_resource type="StyleBoxEmpty" id=68]
+
+[sub_resource type="StyleBoxEmpty" id=69]
+
+[node name="MultiplayerGame" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 10, 16 )
+
+[node name="Platform" type="MeshInstance" parent="."]
+transform = Transform( 50, 0, 0, 0, 0, -30, 0, 1, 0, 0, 0, -0.05 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 76 )
+
+[node name="CubesGrid" type="Spatial" parent="."]
+
+[node name="NextCubeView" type="Node2D" parent="."]
+
+[node name="Particles" type="Node2D" parent="."]
+
+[node name="Particles2D" type="CPUParticles2D" parent="Particles"]
+material = SubResource( 59 )
+lifetime = 4.0
+preprocess = 5.0
+texture = ExtResource( 5 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+angle = 720.0
+color_ramp = SubResource( 60 )
+anim_speed = 0.5
+
+[node name="Hud" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="NextCubeHeadline" type="Label" parent="Hud"]
+visible = false
+anchor_right = 0.01
+margin_left = 995.0
+margin_top = 70.0
+margin_right = 1137.6
+margin_bottom = 97.0
+custom_fonts/font = ExtResource( 6 )
+text = "Nächste Figur"
+
+[node name="PointsHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 1041.0
+margin_top = 272.0
+margin_right = 1110.0
+margin_bottom = 299.0
+custom_fonts/font = ExtResource( 6 )
+text = "Punkte"
+
+[node name="Points" type="Label" parent="Hud"]
+visible = false
+margin_right = 17.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 61 )
+text = "0"
+
+[node name="LevelHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 934.0
+margin_top = 383.0
+margin_right = 991.0
+margin_bottom = 410.0
+custom_fonts/font = ExtResource( 6 )
+text = "Level"
+
+[node name="Level" type="Label" parent="Hud"]
+visible = false
+margin_right = 13.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 62 )
+text = "1"
+
+[node name="LinesHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 1189.0
+margin_top = 384.0
+margin_right = 1257.0
+margin_bottom = 411.0
+custom_fonts/font = ExtResource( 6 )
+text = "Reihen"
+
+[node name="Lines" type="Label" parent="Hud"]
+visible = false
+margin_right = 17.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 63 )
+text = "0"
+
+[node name="TimeHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 1062.0
+margin_top = 514.0
+margin_right = 1105.0
+margin_bottom = 541.0
+custom_fonts/font = ExtResource( 6 )
+text = "Zeit"
+
+[node name="Time" type="Label" parent="Hud"]
+visible = false
+margin_right = 118.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 64 )
+text = "00:00:00"
+
+[node name="PausedGameOverTexturRect" type="TextureRect" parent="Hud"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -100.0
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 600, 200 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hud/PausedGameOverTexturRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 20.0
+
+[node name="PauseLabel" type="Label" parent="Hud/PausedGameOverTexturRect/VBoxContainer"]
+visible = false
+margin_right = 600.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 6 )
+text = "Spiel pausiert"
+align = 1
+
+[node name="GameOverLabel" type="Label" parent="Hud/PausedGameOverTexturRect/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Game Over"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hud/PausedGameOverTexturRect/VBoxContainer"]
+margin_top = 31.0
+margin_right = 600.0
+margin_bottom = 181.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="ContinueAgainButton" type="Button" parent="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer"]
+margin_right = 298.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 67 )
+custom_styles/focus = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
+text = "Weiterspielen?"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitlescreenMenu" type="Button" parent="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer"]
+margin_left = 302.0
+margin_right = 600.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 67 )
+custom_styles/focus = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
+text = "Zum Hauptmenü"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AchievementTextureRect" type="TextureRect" parent="Hud"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_right = 390.0
+margin_bottom = 100.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hud/AchievementTextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="AchievementLabel" type="Label" parent="Hud/AchievementTextureRect/HBoxContainer"]
+margin_left = 20.0
+margin_top = 36.0
+margin_right = 349.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 6 )
+text = "Neue maximale gelöschte Reihen"
+align = 1
+
+[node name="TimerAchievement" type="Timer" parent="."]
+
+[connection signal="pressed" from="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/ContinueAgainButton" to="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/ContinueAgainButton" method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/TitlescreenMenu" to="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/TitlescreenMenu" method="_on_TitlescreenMenu_pressed"]
+[connection signal="timeout" from="TimerAchievement" to="." method="_on_TimerAchievement_timeout"]

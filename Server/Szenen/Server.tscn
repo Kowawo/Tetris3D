@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+
+var network = NetworkedMultiplayerENet.new()
+var port = 1909
+var maxPlayers = 10
+
+
+var players = {} # players = { playerID : [points, level, deletedRows] }
+var games = {}   # games = { roomName : [playerID1, playerID2, password] }
+var rooms = {}   # rooms = { roomName : true }
+
+func _ready():
+	startServer()
+
+func _process(_delta):
+	sendRooms()
+
+func startServer():
+	network.create_server(port, maxPlayers)
+	get_tree().set_network_peer(network)
+	
+	print(\"Server gestartet\")
+	
+	network.connect(\"peer_connected\", self, \"peerConnected\")
+	network.connect(\"peer_disconnected\", self, \"peerDisconnected\")
+
+remote func createGame(roomName, password):
+	var playerID = get_tree().get_rpc_sender_id()
+	if (games.has(roomName)):
+		gameExists(playerID, true)
+	else:
+		gameExists(playerID, false)
+		games[roomName] = [playerID, null, password]
+		rooms[roomName] = [false if password == \"\" else true]
+		print(\"User \", playerID, \" erstellt den Raum \", roomName, \" mit dem Passwort \", password)
+
+func gameExists(playerID, boolean):
+	rpc_id(playerID, \"gameExists\", boolean)
+
+remote func deleteGame():
+	var playerID = get_tree().get_rpc_sender_id()
+	for room in games:
+		var playerOne = games[room][0]
+		
+		if (playerOne != null and playerOne == playerID):
+			print(\"Raum \", room, \" wurde gelöscht.\")
+			games.erase(room)
+			rooms.erase(room)
+			break
+
+func sendRooms():
+	rpc_unreliable(\"receiveRooms\", rooms)
+
+remote func receiveData(points, level, deletedRows):
+	var playerID = get_tree().get_rpc_sender_id()
+	players[playerID] = [points, level, deletedRows]
+	sendData(playerID, points, level, deletedRows)
+
+func sendData(playerID, points, level, deletedRows):
+	for game in games:
+		var playerOne = game[0]
+		var playerTwo = game[1]
+		
+		if (playerOne == playerID):
+			rpc_id(playerTwo, \"receiveData\", points, level, deletedRows)
+			break
+			
+		if (playerTwo == playerID):
+			rpc_id(playerOne, \"receiveData\", points, level, deletedRows)
+			break
+
+
+func peerConnected(playerID):
+	print(\"User \" + str(playerID) + \" connected\")
+	players[playerID] = [0, 1, 0]
+
+func peerDisconnected(playerID):
+	print(\"User \" + str(playerID) + \" disconnected\")
+	players.erase(playerID)
+	
+	# Spieler wird aus dem Raum geworfen und falls er der einzige Spieler war
+	# wird der gesamte Raum gelöscht
+	for room in games:
+		var playerOne = games[room][0]
+		var playerTwo = games[room][1]
+		
+		if (playerOne != null and playerOne == playerID):
+			if (playerTwo == null):
+				print(\"Raum \", room, \" wurde gelöscht.\")
+				games.erase(room)
+				rooms.erase(room)
+			else:
+				games[room][0] = null
+			break
+			
+		if (playerTwo != null and playerTwo == playerID):
+			if (playerOne == null):
+				print(\"Raum \", room, \" wurde gelöscht.\")
+				games.erase(room)
+				rooms.erase(room)
+			else:
+				games[room][1] = null
+			break
+"
+
+[node name="Server" type="Node"]
+script = SubResource( 1 )

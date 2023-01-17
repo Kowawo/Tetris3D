@@ -1,0 +1,8 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[sub_resource type="DynamicFontData" id=65]
+font_path = "res://Resource/Font.ttf"
+
+[resource]
+size = 20
+font_data = SubResource( 65 )

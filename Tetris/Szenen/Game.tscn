@@ -1,0 +1,692 @@
+[gd_scene load_steps=82 format=2]
+
+[ext_resource path="res://Resource/20_FontRessource.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Game/Game.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Game/Hud.gd" type="Script" id=3]
+[ext_resource path="res://Image/2DEffect.png" type="Texture" id=4]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-2/Frame3.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Game/TitlescreenMenuButton.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Game/ContinueButton.gd" type="Script" id=7]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-2/Frame1.png" type="Texture" id=8]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-4/Frame0.png" type="Texture" id=9]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-2/Frame2.png" type="Texture" id=10]
+[ext_resource path="res://Image/UpgradeimageAssets/UpgradesTextureImage.png" type="Texture" id=11]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-1/Frame0.png" type="Texture" id=12]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-1/Frame2.png" type="Texture" id=13]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-1/Frame3.png" type="Texture" id=14]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-1/Frame1.png" type="Texture" id=15]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-1/Frame5.png" type="Texture" id=16]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-1/Frame4.png" type="Texture" id=17]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-2/Frame0.png" type="Texture" id=18]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade1-4/Frame1.png" type="Texture" id=19]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-1/Frame1.png" type="Texture" id=20]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-1/Frame2.png" type="Texture" id=21]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-1/Frame3.png" type="Texture" id=22]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-2/Frame0.png" type="Texture" id=23]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-2/Frame4.png" type="Texture" id=24]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-3/Frame0.png" type="Texture" id=25]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-3/Frame1.png" type="Texture" id=26]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-4/Frame5.png" type="Texture" id=27]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-3/Frame4.png" type="Texture" id=28]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-3/Frame6.png" type="Texture" id=29]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-3/Frame5.png" type="Texture" id=30]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-2/Frame1.png" type="Texture" id=31]
+[ext_resource path="res://Image/Game/GameOverPausedTexturImage.png" type="Texture" id=32]
+[ext_resource path="res://Image/Achievement/AchievementTextureImage.png" type="Texture" id=33]
+[ext_resource path="res://Image/UpgradeimageAssets/Progressbar.png" type="Texture" id=34]
+[ext_resource path="res://Image/UpgradeimageAssets/ProgressbarUnder.png" type="Texture" id=35]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-3/Frame3.png" type="Texture" id=36]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-2/Frame2.png" type="Texture" id=37]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-3/Frame2.png" type="Texture" id=38]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-2/Frame3.png" type="Texture" id=39]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-4/Frame2.png" type="Texture" id=40]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-4/Frame3.png" type="Texture" id=41]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-1/Frame0.png" type="Texture" id=42]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-4/Frame4.png" type="Texture" id=43]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade1-4/Frame6.png" type="Texture" id=44]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame9.png" type="Texture" id=45]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame1.png" type="Texture" id=46]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame8.png" type="Texture" id=47]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame7.png" type="Texture" id=48]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-2/Frame6.png" type="Texture" id=49]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame6.png" type="Texture" id=50]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame4.png" type="Texture" id=51]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-2/Frame4.png" type="Texture" id=52]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-4/Frame0.png" type="Texture" id=53]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-2/Frame5.png" type="Texture" id=54]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame2.png" type="Texture" id=55]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame3.png" type="Texture" id=56]
+[ext_resource path="res://Image/UpgradeimageAssets/Upgrade2-3/Frame10.png" type="Texture" id=57]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame0.png" type="Texture" id=58]
+[ext_resource path="res://Image/UpgradeImageAssets/Upgrade2-3/Frame5.png" type="Texture" id=59]
+[ext_resource path="res://Szenen/AnimationController.tscn" type="PackedScene" id=60]
+
+[sub_resource type="Shader" id=80]
+code = "shader_type spatial;
+render_mode blend_mul;
+
+uniform float specular;
+uniform float metallic;
+uniform float roughness;
+uniform float intensity;
+
+uniform sampler2D texture_emission;
+uniform float emission_energy;
+
+uniform vec3 albedo;
+uniform sampler2D texture_albedo;
+
+varying vec2 tex_position;
+
+void vertex() {
+	tex_position = VERTEX.xz / 2.0 + 0.5;
+	
+}
+ 
+void fragment()
+{
+	float fresnel = pow(sqrt(1.0 - dot(NORMAL, VIEW)), intensity);
+	
+	//EMISSION = emission_energy * texture(texture_emission, tex_position).xyz;
+	SPECULAR = specular;
+	METALLIC = metallic;
+	ROUGHNESS = roughness * (1.0 - fresnel);
+	
+	EMISSION = fresnel * (texture(texture_emission, tex_position).xyz * emission_energy);
+	EMISSION = EMISSION + fresnel * emission_energy * texture(texture_albedo, tex_position).xyz;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=81]
+shader = SubResource( 80 )
+shader_param/specular = null
+shader_param/metallic = null
+shader_param/roughness = null
+shader_param/intensity = null
+shader_param/emission_energy = null
+shader_param/albedo = null
+
+[sub_resource type="PlaneMesh" id=7]
+material = SubResource( 81 )
+
+[sub_resource type="CanvasItemMaterial" id=59]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=60]
+colors = PoolColorArray( 0.299522, 0.450111, 0.923828, 1, 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=65]
+font_path = "res://Resource/Font.ttf"
+
+[sub_resource type="DynamicFont" id=61]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="DynamicFont" id=62]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="DynamicFont" id=63]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="DynamicFont" id=64]
+size = 25
+font_data = SubResource( 65 )
+
+[sub_resource type="StyleBoxEmpty" id=66]
+
+[sub_resource type="StyleBoxEmpty" id=67]
+
+[sub_resource type="StyleBoxEmpty" id=68]
+
+[sub_resource type="StyleBoxEmpty" id=69]
+
+[sub_resource type="AnimatedTexture" id=70]
+flags = 4
+frames = 6
+frame_0/texture = ExtResource( 12 )
+frame_0/delay_sec = 0.15
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.15
+frame_2/texture = ExtResource( 13 )
+frame_2/delay_sec = 0.15
+frame_3/texture = ExtResource( 14 )
+frame_3/delay_sec = 0.15
+frame_4/texture = ExtResource( 17 )
+frame_4/delay_sec = 0.15
+frame_5/texture = ExtResource( 16 )
+frame_5/delay_sec = 0.15
+
+[sub_resource type="AnimatedTexture" id=77]
+flags = 4
+frames = 5
+frame_0/texture = ExtResource( 23 )
+frame_0/delay_sec = 0.15
+frame_1/texture = ExtResource( 31 )
+frame_1/delay_sec = 0.15
+frame_2/texture = ExtResource( 37 )
+frame_2/delay_sec = 0.15
+frame_3/texture = ExtResource( 39 )
+frame_3/delay_sec = 0.15
+frame_4/texture = ExtResource( 24 )
+frame_4/delay_sec = 0.15
+
+[sub_resource type="AnimatedTexture" id=78]
+flags = 4
+frames = 7
+frame_0/texture = ExtResource( 25 )
+frame_0/delay_sec = 0.15
+frame_1/texture = ExtResource( 26 )
+frame_1/delay_sec = 0.15
+frame_2/texture = ExtResource( 38 )
+frame_2/delay_sec = 0.15
+frame_3/texture = ExtResource( 36 )
+frame_3/delay_sec = 0.15
+frame_4/texture = ExtResource( 28 )
+frame_4/delay_sec = 0.15
+frame_5/texture = ExtResource( 30 )
+frame_5/delay_sec = 0.15
+frame_6/texture = ExtResource( 29 )
+frame_6/delay_sec = 0.15
+
+[sub_resource type="AnimatedTexture" id=75]
+flags = 4
+frames = 7
+frame_0/texture = ExtResource( 9 )
+frame_0/delay_sec = 0.15
+frame_1/texture = ExtResource( 19 )
+frame_1/delay_sec = 0.15
+frame_2/texture = ExtResource( 40 )
+frame_2/delay_sec = 0.15
+frame_3/texture = ExtResource( 41 )
+frame_3/delay_sec = 0.15
+frame_4/texture = ExtResource( 43 )
+frame_4/delay_sec = 0.15
+frame_5/texture = ExtResource( 27 )
+frame_5/delay_sec = 0.15
+frame_6/texture = ExtResource( 44 )
+frame_6/delay_sec = 0.15
+
+[sub_resource type="AnimatedTexture" id=72]
+flags = 4
+frames = 4
+frame_0/texture = ExtResource( 42 )
+frame_0/delay_sec = 0.15
+frame_1/texture = ExtResource( 20 )
+frame_1/delay_sec = 0.15
+frame_2/texture = ExtResource( 21 )
+frame_2/delay_sec = 0.15
+frame_3/texture = ExtResource( 22 )
+frame_3/delay_sec = 0.15
+
+[sub_resource type="AnimatedTexture" id=71]
+flags = 4
+frames = 7
+frame_0/texture = ExtResource( 18 )
+frame_0/delay_sec = 0.15
+frame_1/texture = ExtResource( 8 )
+frame_1/delay_sec = 0.15
+frame_2/texture = ExtResource( 10 )
+frame_2/delay_sec = 0.15
+frame_3/texture = ExtResource( 5 )
+frame_3/delay_sec = 0.15
+frame_4/texture = ExtResource( 52 )
+frame_4/delay_sec = 0.15
+frame_5/texture = ExtResource( 54 )
+frame_5/delay_sec = 0.15
+frame_6/texture = ExtResource( 49 )
+frame_6/delay_sec = 0.15
+
+[sub_resource type="AnimatedTexture" id=79]
+flags = 4
+frames = 11
+frame_0/texture = ExtResource( 58 )
+frame_0/delay_sec = 0.15
+frame_1/texture = ExtResource( 46 )
+frame_1/delay_sec = 0.15
+frame_2/texture = ExtResource( 55 )
+frame_2/delay_sec = 0.15
+frame_3/texture = ExtResource( 56 )
+frame_3/delay_sec = 0.15
+frame_4/texture = ExtResource( 51 )
+frame_4/delay_sec = 0.15
+frame_5/texture = ExtResource( 59 )
+frame_5/delay_sec = 0.15
+frame_6/texture = ExtResource( 50 )
+frame_6/delay_sec = 0.15
+frame_7/texture = ExtResource( 48 )
+frame_7/delay_sec = 0.15
+frame_8/texture = ExtResource( 47 )
+frame_8/delay_sec = 0.15
+frame_9/texture = ExtResource( 45 )
+frame_9/delay_sec = 0.15
+frame_10/texture = ExtResource( 57 )
+frame_10/delay_sec = 0.15
+
+[node name="Game" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 10, 16 )
+
+[node name="Platform" type="MeshInstance" parent="."]
+transform = Transform( 25, 0, 0, 0, -4.37114e-08, -15.2, 0, 1, -6.64413e-07, 5, 10, -0.05 )
+mesh = SubResource( 7 )
+
+[node name="CubesGrid" type="Spatial" parent="."]
+
+[node name="NextCubeView" type="Node2D" parent="."]
+
+[node name="StoreCubeView" type="Node2D" parent="."]
+
+[node name="AssistanceCube" type="Spatial" parent="."]
+
+[node name="Particles" type="Node2D" parent="."]
+
+[node name="Particles2D" type="CPUParticles2D" parent="Particles"]
+material = SubResource( 59 )
+lifetime = 4.0
+preprocess = 5.0
+texture = ExtResource( 4 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+angle = 720.0
+color_ramp = SubResource( 60 )
+anim_speed = 0.5
+
+[node name="Hud" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextCubeHeadline" type="Label" parent="Hud"]
+visible = false
+anchor_right = 0.01
+margin_left = 995.0
+margin_top = 70.0
+margin_right = 1137.6
+margin_bottom = 97.0
+custom_fonts/font = ExtResource( 1 )
+text = "Nächste Figur"
+
+[node name="StorageHeadline" type="Label" parent="Hud"]
+visible = false
+anchor_right = 0.01
+margin_left = 103.0
+margin_top = 78.0
+margin_right = 149.6
+margin_bottom = 105.0
+custom_fonts/font = ExtResource( 1 )
+text = "Lager"
+
+[node name="PointsHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 1041.0
+margin_top = 272.0
+margin_right = 1110.0
+margin_bottom = 299.0
+custom_fonts/font = ExtResource( 1 )
+text = "Punkte"
+
+[node name="Points" type="Label" parent="Hud"]
+visible = false
+margin_right = 17.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 61 )
+text = "0"
+
+[node name="LevelHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 934.0
+margin_top = 383.0
+margin_right = 991.0
+margin_bottom = 410.0
+custom_fonts/font = ExtResource( 1 )
+text = "Level"
+
+[node name="Level" type="Label" parent="Hud"]
+visible = false
+margin_right = 13.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 62 )
+text = "1"
+
+[node name="LinesHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 1189.0
+margin_top = 384.0
+margin_right = 1257.0
+margin_bottom = 411.0
+custom_fonts/font = ExtResource( 1 )
+text = "Reihen"
+
+[node name="Lines" type="Label" parent="Hud"]
+visible = false
+margin_right = 17.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 63 )
+text = "0"
+
+[node name="TimeHeadline" type="Label" parent="Hud"]
+visible = false
+margin_left = 1062.0
+margin_top = 514.0
+margin_right = 1105.0
+margin_bottom = 541.0
+custom_fonts/font = ExtResource( 1 )
+text = "Zeit"
+
+[node name="Time" type="Label" parent="Hud"]
+visible = false
+margin_right = 118.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 64 )
+text = "00:00:00"
+
+[node name="SameColorLabel" type="Label" parent="Hud"]
+visible = false
+margin_left = 160.0
+margin_top = 500.0
+margin_right = 460.0
+margin_bottom = 527.0
+rect_min_size = Vector2( 300, 0 )
+custom_fonts/font = ExtResource( 1 )
+text = "Repariere Farbe"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SameColorTextureProgress" type="TextureProgress" parent="Hud/SameColorLabel"]
+margin_top = 40.0
+margin_right = 300.0
+margin_bottom = 80.0
+step = 0.2
+texture_under = ExtResource( 35 )
+texture_progress = ExtResource( 34 )
+
+[node name="TimerSameColor" type="Timer" parent="Hud/SameColorLabel"]
+wait_time = 0.1
+
+[node name="GravityToNullLabel" type="Label" parent="Hud"]
+visible = false
+margin_left = 160.0
+margin_top = 350.0
+margin_right = 460.0
+margin_bottom = 377.0
+rect_min_size = Vector2( 300, 0 )
+custom_fonts/font = ExtResource( 1 )
+text = "Repariere die Gravitation"
+align = 1
+
+[node name="GravityToNullTextureProgress" type="TextureProgress" parent="Hud/GravityToNullLabel"]
+margin_top = 40.0
+margin_right = 300.0
+margin_bottom = 80.0
+step = 0.2
+texture_under = ExtResource( 35 )
+texture_progress = ExtResource( 34 )
+
+[node name="TimerGravityToNull" type="Timer" parent="Hud/GravityToNullLabel"]
+wait_time = 0.1
+
+[node name="PausedGameOverTexturRect" type="TextureRect" parent="Hud"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -100.0
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 600, 200 )
+texture = ExtResource( 32 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hud/PausedGameOverTexturRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 20.0
+
+[node name="PauseLabel" type="Label" parent="Hud/PausedGameOverTexturRect/VBoxContainer"]
+visible = false
+margin_right = 600.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 1 )
+text = "Spiel pausiert"
+align = 1
+
+[node name="GameOverLabel" type="Label" parent="Hud/PausedGameOverTexturRect/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Game Over"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hud/PausedGameOverTexturRect/VBoxContainer"]
+margin_top = 31.0
+margin_right = 600.0
+margin_bottom = 181.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="ContinueAgainButton" type="Button" parent="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer"]
+margin_right = 298.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 67 )
+custom_styles/focus = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
+text = "Weiterspielen?"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitlescreenMenu" type="Button" parent="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer"]
+margin_left = 302.0
+margin_right = 600.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 67 )
+custom_styles/focus = SubResource( 68 )
+custom_styles/normal = SubResource( 69 )
+text = "Zum Hauptmenü"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AchievementTextureRect" type="TextureRect" parent="Hud"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_right = 390.0
+margin_bottom = 100.0
+texture = ExtResource( 33 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hud/AchievementTextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="AchievementLabel" type="Label" parent="Hud/AchievementTextureRect/HBoxContainer"]
+margin_left = 20.0
+margin_top = 36.0
+margin_right = 349.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+text = "Neue maximale gelöschte Reihen"
+align = 1
+
+[node name="UpgradesTextureRect" type="TextureRect" parent="Hud"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = -270.0
+margin_right = 480.0
+margin_bottom = 270.0
+texture = ExtResource( 11 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hud/UpgradesTextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 10.0
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Hud/UpgradesTextureRect/HBoxContainer"]
+margin_right = 478.0
+margin_bottom = 530.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1"]
+margin_right = 478.0
+margin_bottom = 530.0
+size_flags_horizontal = 3
+
+[node name="Upgrade1" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer"]
+visible = false
+margin_left = 10.0
+margin_right = 468.0
+margin_bottom = 457.0
+size_flags_horizontal = 4
+texture_normal = SubResource( 70 )
+
+[node name="Upgrade2" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer"]
+visible = false
+margin_left = 10.0
+margin_right = 468.0
+margin_bottom = 458.0
+size_flags_horizontal = 4
+texture_normal = SubResource( 77 )
+
+[node name="Upgrade3" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer"]
+visible = false
+margin_left = 492.0
+margin_right = 950.0
+margin_bottom = 458.0
+size_flags_horizontal = 4
+texture_normal = SubResource( 78 )
+
+[node name="Upgrade4" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer"]
+visible = false
+margin_left = 492.0
+margin_right = 950.0
+margin_bottom = 458.0
+size_flags_horizontal = 4
+texture_normal = SubResource( 75 )
+
+[node name="Upgrade1Label" type="RichTextLabel" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer"]
+margin_top = 251.0
+margin_right = 478.0
+margin_bottom = 279.0
+rect_clip_content = false
+size_flags_vertical = 6
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Doppelte Punkte für immer! [wave amp=100 ]Wuhu[/wave][/center]"
+text = "Doppelte Punkte für immer! Wuhu"
+fit_content_height = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Hud/UpgradesTextureRect/HBoxContainer"]
+margin_left = 482.0
+margin_right = 960.0
+margin_bottom = 530.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2"]
+margin_right = 478.0
+margin_bottom = 530.0
+size_flags_horizontal = 3
+
+[node name="Upgrade1" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer"]
+visible = false
+margin_left = -472.0
+margin_right = -14.0
+margin_bottom = 458.0
+size_flags_horizontal = 4
+texture_normal = SubResource( 72 )
+
+[node name="Upgrade2" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer"]
+visible = false
+margin_left = 10.0
+margin_right = 468.0
+margin_bottom = 458.0
+size_flags_horizontal = 4
+texture_normal = SubResource( 71 )
+
+[node name="Upgrade3" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer"]
+visible = false
+margin_left = 10.0
+margin_right = 468.0
+margin_bottom = 458.0
+size_flags_horizontal = 4
+texture_normal = SubResource( 79 )
+
+[node name="Upgrade4" type="TextureButton" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer"]
+visible = false
+margin_left = -472.0
+margin_right = -14.0
+margin_bottom = 458.0
+size_flags_horizontal = 4
+texture_normal = ExtResource( 53 )
+
+[node name="Upgrade2Label" type="RichTextLabel" parent="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 251.0
+margin_right = 478.0
+margin_bottom = 279.0
+rect_clip_content = false
+size_flags_vertical = 6
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Eine besondere Hilfestellung![wave amp=100 ] Wuhu[/wave][/center]"
+text = "Eine besondere Hilfestellung! Wuhu"
+fit_content_height = true
+
+[node name="TimerAchievement" type="Timer" parent="."]
+
+[node name="AnimationController" parent="." instance=ExtResource( 60 )]
+
+[node name="AnimationTimerCube2" type="Timer" parent="AnimationController"]
+wait_time = 0.05
+
+[node name="AnimationLightTween" type="Tween" parent="AnimationController"]
+
+[node name="Lights" type="Node" parent="AnimationController"]
+
+[connection signal="ready" from="Platform" to="AnimationController" method="_on_Platform_ready"]
+[connection signal="value_changed" from="Hud/SameColorLabel/SameColorTextureProgress" to="." method="_on_SameColorTextureProgress_value_changed"]
+[connection signal="timeout" from="Hud/SameColorLabel/TimerSameColor" to="." method="_on_TimerSameColor_timeout"]
+[connection signal="value_changed" from="Hud/GravityToNullLabel/GravityToNullTextureProgress" to="." method="_on_GravityToNullTextureProgress_value_changed"]
+[connection signal="timeout" from="Hud/GravityToNullLabel/TimerGravityToNull" to="." method="_on_TimerGravityToNull_timeout"]
+[connection signal="pressed" from="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/ContinueAgainButton" to="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/ContinueAgainButton" method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/TitlescreenMenu" to="Hud/PausedGameOverTexturRect/VBoxContainer/HBoxContainer/TitlescreenMenu" method="_on_TitlescreenMenu_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer/Upgrade1" to="." method="_on_Upgrade1_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer/Upgrade2" to="." method="_on_Upgrade1_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer/Upgrade3" to="." method="_on_Upgrade1_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer1/VBoxContainer/Upgrade4" to="." method="_on_Upgrade1_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer/Upgrade1" to="." method="_on_Upgrade2_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer/Upgrade2" to="." method="_on_Upgrade2_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer/Upgrade3" to="." method="_on_Upgrade2_pressed"]
+[connection signal="pressed" from="Hud/UpgradesTextureRect/HBoxContainer/HBoxContainer2/VBoxContainer/Upgrade4" to="." method="_on_Upgrade2_pressed"]
+[connection signal="timeout" from="TimerAchievement" to="." method="_on_TimerAchievement_timeout"]
+[connection signal="timeout" from="AnimationController/AnimationTimerCube2" to="AnimationController" method="_on_AnimationTimerCube_timeout"]
